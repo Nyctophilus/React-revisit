@@ -1,0 +1,24 @@
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 1px 6px 11px grey;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #969494;
+  letter-spacing: 2px;
+}
