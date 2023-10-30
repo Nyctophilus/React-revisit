@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./styles/Book.module.css";
 
-const Book = ({ img, title, auther }) => {
+const Book = ({ id, img, title, auther, getBook }) => {
   const [ToggleTitle, setToggleTitle] = useState(false);
   const toggleTitle = () => setToggleTitle(!ToggleTitle);
 
@@ -14,6 +14,9 @@ const Book = ({ img, title, auther }) => {
           : title}
       </h2>
       <p>{auther}</p>
+      <button onClick={() => getBook(id)}>
+        Log the book!
+      </button>
     </article>
   );
 };

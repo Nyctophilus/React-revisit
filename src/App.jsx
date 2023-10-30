@@ -2,17 +2,24 @@ import "./styles/App.css";
 import BookAPI from "./BookAPI";
 import Book from "./Book";
 
-const App = () => (
-  <>
-    <h1 className="headLine">Amazon Best sellers!</h1>
-    <section className="books">
-      {BookAPI.map(({ img, title, auther }) => (
-        <Book
-          {...{ img, title, auther }}
-          key={title + img}
-        />
-      ))}
-    </section>
-  </>
-);
+const App = () => {
+  const getBook = (id) => {
+    const book = BookAPI.find((book) => book.id === id);
+    console.log(book);
+  };
+
+  return (
+    <>
+      <h1 className="headLine">Amazon Best sellers!</h1>
+      <section className="books">
+        {BookAPI.map(({ id, img, title, auther }) => (
+          <Book
+            {...{ id, img, title, auther, getBook }}
+            key={id + title + img}
+          />
+        ))}
+      </section>
+    </>
+  );
+};
 export default App;
