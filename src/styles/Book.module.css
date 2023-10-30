@@ -8,9 +8,10 @@ article {
   flex-direction: column;
   gap: 0.5rem;
   background-color: #fff;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem 1.5rem 1rem;
   border-radius: 2rem;
   box-shadow: 1px 6px 11px grey;
+  position: relative;
 }
 
 h2 {
@@ -21,4 +22,26 @@ p {
   text-align: center;
   color: #969494;
   letter-spacing: 2px;
+}
+
+span {
+  position: absolute;
+  inset: 0;
+  background-color: #a7450e;
+  border-top-left-radius: 2rem;
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+}
+
+span::after {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  height: 100%;
+  aspect-ratio: 1;
+  transform: skewX(25deg);
+  right: -38%;
+  top: 0;
 }

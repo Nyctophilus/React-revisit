@@ -12,12 +12,21 @@ const App = () => {
     <>
       <h1 className="headLine">Amazon Best sellers!</h1>
       <section className="books">
-        {BookAPI.map(({ id, img, title, auther }) => (
-          <Book
-            {...{ id, img, title, auther, getBook }}
-            key={id + title + img}
-          />
-        ))}
+        {BookAPI.map(
+          ({ id, img, title, auther }, index) => (
+            <Book
+              {...{
+                id,
+                img,
+                title,
+                auther,
+                getBook,
+                index,
+              }}
+              key={id + title + img}
+            />
+          )
+        )}
       </section>
     </>
   );
